@@ -1,9 +1,9 @@
 ﻿Class MainWindow
 
-    Dim AngkaPertama As Long
-    Dim AngkaKedua As Long
+    Dim AngkaPertama As Double
+    Dim AngkaKedua As Double
     Dim Kalkulasi As String
-    Dim Hasil As Long
+    Dim Hasil As Double
 
     Private Sub buttonTambah_Click(sender As Object, e As RoutedEventArgs) Handles buttonTambah.Click
         Kalkulasi = "+"

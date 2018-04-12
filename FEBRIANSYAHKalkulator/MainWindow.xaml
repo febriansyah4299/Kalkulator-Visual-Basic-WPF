@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEBRIANSYAHKalkulator"
         mc:Ignorable="d"
-        Title="FEBRIANSYAH.ID Kalkulator VB" Height="200" Width="310" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="FEBRIANSYAH.ID Kalkulator VB" Height="250" Width="310" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" FontSize="15"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="22" Margin="10,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" FontSize="15"/>
@@ -16,6 +16,7 @@
         <Button x:Name="buttonKali" Content="*" HorizontalAlignment="Left" Margin="229,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
         <Button x:Name="buttonBagi" Content="/" HorizontalAlignment="Left" Margin="259,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
         <Button x:Name="buttonSD" Content="=" HorizontalAlignment="Left" Margin="184,100,0,0" VerticalAlignment="Top" Width="100" Height="25" FontSize="15" FontWeight="Bold"/>
+        <Label x:Name="labelE" Content="Catatan: E=10. Contoh: 3E+8 = 3x10^8" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" FontSize="15"/>
 
     </Grid>
 </Window>
