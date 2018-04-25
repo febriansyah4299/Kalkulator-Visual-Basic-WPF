@@ -5,18 +5,412 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FEBRIANSYAHKalkulator"
         mc:Ignorable="d"
-        Title="FEBRIANSYAH.ID Kalkulator VB" Height="250" Width="310" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="FEBRIANSYAH.ID Kalkulator VB" Height="400" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <SolidColorBrush Color="#FFE6E6E6"/>
+    </Window.Background>
     <Grid>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" FontSize="15"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="22" Margin="10,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" FontSize="15"/>
-        <Label x:Name="labelOperasi" Content="" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontSize="15" FontWeight="Bold"/>
-        <TextBox x:Name="textBoxHasil" HorizontalAlignment="Left" Height="24" Margin="10,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" FontSize="15"/>
-        <Button x:Name="buttonTambah" Content="+" HorizontalAlignment="Left" Margin="169,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
-        <Button x:Name="buttonKurang" Content="-" HorizontalAlignment="Left" Margin="199,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
-        <Button x:Name="buttonKali" Content="*" HorizontalAlignment="Left" Margin="229,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
-        <Button x:Name="buttonBagi" Content="/" HorizontalAlignment="Left" Margin="259,38,0,0" VerticalAlignment="Top" Width="25" Height="25" FontSize="15" FontWeight="Bold"/>
-        <Button x:Name="buttonSD" Content="=" HorizontalAlignment="Left" Margin="184,100,0,0" VerticalAlignment="Top" Width="100" Height="25" FontSize="15" FontWeight="Bold"/>
-        <Label x:Name="labelE" Content="Catatan: E=10. Contoh: 3E+8 = 3x10^8" HorizontalAlignment="Left" Margin="10,181,0,0" VerticalAlignment="Top" FontSize="15"/>
-
+        <Label x:Name="labelOperasi" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="12" Width="372"/>
+        <Label x:Name="labelHasil" Content="" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Width="372"/>
+        <Button x:Name="Btn_1" Content="1" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_2" Content="2" HorizontalAlignment="Left" Margin="65,144,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_3" Content="3" HorizontalAlignment="Left" Margin="120,144,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_4" Content="4" HorizontalAlignment="Left" Margin="10,199,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_5" Content="5" HorizontalAlignment="Left" Margin="65,199,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_6" Content="6" HorizontalAlignment="Left" Margin="120,199,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_7" Content="7" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_8" Content="8" HorizontalAlignment="Left" Margin="65,254,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_9" Content="9" HorizontalAlignment="Left" Margin="120,254,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_0" Content="0" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFFAFAFA"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_SD" Content="=" HorizontalAlignment="Left" Margin="65,309,0,0" VerticalAlignment="Top" Width="105" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF81BCEB"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Tambah" Content="+" HorizontalAlignment="Left" Margin="175,144,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF027AD7"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Kurang" Content="-" HorizontalAlignment="Left" Margin="175,199,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF027AD7"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Kali" Content="*" HorizontalAlignment="Left" Margin="175,254,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24"  BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF027AD7"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Bagi" Content="/" HorizontalAlignment="Left" Margin="175,309,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24"  BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FF027AD7"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Clear" Content="C" HorizontalAlignment="Left" Margin="230,309,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="20" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Sin" Content="Sin" HorizontalAlignment="Left" Margin="230,144,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Cos" Content="Cos" HorizontalAlignment="Left" Margin="230,199,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="Btn_Tan" Content="Tan" HorizontalAlignment="Left" Margin="230,254,0,0" VerticalAlignment="Top" Width="50" Height="50" FontWeight="Bold" FontSize="24" BorderBrush="Black">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#FFF0F0F0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFDFDFDF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="labelNotice" Content="hanya dapat melakukan penghitungan sederhana" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" FontSize="10"/>
     </Grid>
 </Window>
